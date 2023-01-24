@@ -30,6 +30,9 @@ jobs:
     - name: Xref
       continue-on-error: true    # Until problems are fixed
       run: ./build xref
+    - name: Git log
+      continue-on-error: true
+      run: git log
     - name: Build zip archive for Eclipse
       continue-on-error: true    # Until problems are fixed
       run: cd eclipse && ./build
